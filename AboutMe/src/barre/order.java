@@ -32,17 +32,18 @@ public class order {
 		Scanner scan = new Scanner(System.in);
 		DecimalFormat df = new DecimalFormat ("0.00");
 
-		System.out.println("Enter the number of burgers:");
+		System.out.print("Enter the number of burgers:"); numberofburgers= scan.nextInt();
 
-		numberofburgers= scan.nextInt();
 
-		System.out.println("Enter the number of fries:");
+		
 
-		numberoffries= scan.nextInt();
+		System.out.print("Enter the number of fries:");numberoffries= scan.nextInt();
 
-		System.out.println("Enter the number of soda:");
+		
 
-		numberofsoda= scan.nextInt();
+		System.out.print("Enter the number of soda:");numberofsoda= scan.nextInt();
+
+		
 
 		System.out.println("Total before tax:$" +df.format (priceofburger* numberofburgers + priceoffries*numberoffries + priceofsoda*numberofsoda));
 
@@ -52,12 +53,12 @@ public class order {
 		System.out.println("Tax:$" + df.format (tax));
 
 		System.out.println("Final total:$" + df.format ( tax + Totalprice));
-		
-		System.out.println("Enter amount tendered:");
-		
 		double amountgiven;
+		System.out.print("Enter amount tendered:"); amountgiven = scan.nextInt();
 		
-		amountgiven= scan.nextInt();
+		
+		
+	
 		
 		System.out.println("Change:$" + df.format (amountgiven - (Totalprice + tax) ));
 		
